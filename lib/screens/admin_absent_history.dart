@@ -215,7 +215,7 @@ class Datawidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 23.0),
-      padding: EdgeInsets.symmetric(vertical: 20.0,horizontal: 25.0),
+      padding: EdgeInsets.fromLTRB(25, 20, 25, 10),
       decoration: BoxDecoration(
         color: Color(0xffEEF5FF),
         borderRadius: BorderRadius.all(Radius.circular(20.0)),

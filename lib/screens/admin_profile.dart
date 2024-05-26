@@ -6,6 +6,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'Overall_attendance.dart';
 
 class AdminProfile extends StatefulWidget {
   const AdminProfile({super.key});
@@ -119,6 +120,23 @@ class _AdminProfileState extends State<AdminProfile> {
                                 child: ListTile(
                                   leading: Icon(Icons.account_circle),
                                   title: Text("Attendance History"),
+                                  trailing: Icon(Icons.arrow_forward_ios_sharp),
+                                ),
+                              ),
+                              Container(
+                                height: 1, // Adjust the height of the line
+                                color: Colors.black.withOpacity(0.2), // Set the color of the line
+                                margin: EdgeInsets.symmetric(vertical: 20), // Adjust the margin if needed
+                              ),
+                              GestureDetector(
+                                onTap: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                                    return Overall_Attendance();
+                                  }));
+                                },
+                                child: ListTile(
+                                  leading: Icon(Icons.login_rounded),
+                                  title: Text("OverAll Attendance"),
                                   trailing: Icon(Icons.arrow_forward_ios_sharp),
                                 ),
                               ),

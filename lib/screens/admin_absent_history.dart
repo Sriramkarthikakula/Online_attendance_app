@@ -139,8 +139,8 @@ class _Admin_HistoryState extends State<Admin_History> {
                                 final Absent_list = message['Absentees'];
                                 final Date = message['Date'];
                                 final Faculty = message['Faculty'];
-
-                                final messageContainer = Datawidget(Dept, Course, Section, year, time_slot, Absent_list, Date,Faculty);
+                                final edited = message['edited'];
+                                final messageContainer = Datawidget(Dept, Course, Section, year, time_slot, Absent_list, Date,Faculty,edited);
                                 messageWidgets.add(messageContainer);
                               }
                               return Expanded(
@@ -208,8 +208,8 @@ class Datawidget extends StatelessWidget {
   final List<dynamic> Absent_list;
   final String Date;
   final String Faculty;
-
-  Datawidget(this.Dept,this.Course,this.Section,this.year,this.time_slot,this.Absent_list,this.Date,this.Faculty);
+  final bool edited;
+  Datawidget(this.Dept,this.Course,this.Section,this.year,this.time_slot,this.Absent_list,this.Date,this.Faculty,this.edited);
 
   @override
   Widget build(BuildContext context) {
@@ -336,6 +336,14 @@ class Datawidget extends StatelessWidget {
             children: [
               Text(Faculty,style: TextStyle(
                   fontWeight: FontWeight.bold
+              ),),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Text(edited?"edited":"",style: TextStyle(
+                color: Color(0xff97979f),
               ),),
             ],
           ),

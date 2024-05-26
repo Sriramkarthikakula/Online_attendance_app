@@ -14,10 +14,10 @@ void main() async {
   // Initialize Firebase
   await Firebase.initializeApp(
     options: FirebaseOptions(
-      apiKey: 'AIzaSyCeMmJDX1d2rM7lqvZTpraRI4CI1y4PY4k',
-      appId: '1:91348246199:android:882747af209aacc67e7732',
-      messagingSenderId: '91348246199',
-      projectId: 'attendance-e35d5',
+      apiKey: 'Your apiKey',
+      appId: 'your AppID',
+      messagingSenderId: '12345678909',
+      projectId: 'yagfiuqwegifgqouguh',
     ),
   );
   WidgetsFlutterBinding.ensureInitialized();
